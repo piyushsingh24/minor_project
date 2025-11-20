@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hospitals managment system</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<style>
+    * {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background-image: url("bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Desktop Icons */
+.icons {
+    position: relative;
+    top: 40px;
+    left: 40px;
+    text-align: center;
+    cursor: pointer;
+    width: 90px;
+    color: white;
+}
+
+.icons img {
+    width: 70px;
+    transition: transform 0.2s ease;
+}
+
+.icons:hover img {
+    transform: scale(1.08);
+}
+
+.icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Taskbar */
+.taskbar {
+    background: rgba(240, 240, 240, 0.7);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 6px 15px;
+    z-index: 110;
+}
+
+.taskbar img:first-child {
+    cursor: pointer;
+    height: 40px;
+    width: auto;
+
+}
+
+/* Right section of taskbar */
+.right {
+    position: absolute;
+    right: 10px;
+    height: 80%;
+}
+
+/* Start Menu */
+.startmenu {
+    position: absolute;
+    bottom: -600px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 420px;
+    transition: all 0.3s ease-in-out;
+    z-index: 120;
+}
+
+.startmenu img {
+    width: 100%;
+    border-radius: 10px;
+}
+.startButton{
+    height: 40px;
+    width: auto;
+}
+
+.google-text{
+    color: black;
+    z-index: 100;
+}
+
+#vid{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+</style>
+
+<body>
+    <!-- Desktop Icon -->
+    <div class="icons" id="chromeIcon">
+        <a href="/project.html">
+            <img src="./asset/images/chromeicon.png" alt="">
+            <div class="google-text">Google Chrome</div>
+        </a>
+    </div>
+
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <img id="startButton" src="./asset/images/icons.PNG" alt="Start">
+        <img class="right" src="./asset/images/taskbarright.PNG" alt="">
+    </div>
+
+
+    <!-- Start Menu -->
+    <div class="startmenu" id="startMenu">
+        <img src="./asset/images/startmenu.PNG" alt="">
+    </div>
+
+    <!-- Background Video -->
+    <video autoplay muted id="vid">
+        <source src="./video.webm" type="video/webm">
+    </video>
+
+    <script>
+        let startBtn = document.getElementById("startButton");
+        let startMenu = document.getElementsByClassName("startmenu")[0];
+
+        // Only start button toggles start menu
+        startBtn.addEventListener("click", () => {
+            if (startMenu.style.bottom === "60px") {
+                startMenu.style.bottom = "-600px";
+            } else {
+                startMenu.style.bottom = "60px";
+            }
+        });
+
+        document.getElementById("#chromeIcon").addEventListener("click", () => {
+            window.location.href = "project.html";
+        });
+    </script>
+</body>
+
+</html>
