@@ -823,3 +823,285 @@ button{
         width: 100%;
     }
 }
+
+
+/* Contact Section */
+.contact-section {
+  padding: 80px 0;
+  background: #f4f9ff;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0b5ed7;
+}
+
+.section-subtitle {
+  margin: 10px 0 25px;
+  color: #555;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.info-box i {
+  margin-right: 12px;
+  font-size: 20px;
+  color: #0b5ed7;
+}
+
+.social-icons a {
+  margin-right: 12px;
+  font-size: 22px;
+  color: #0b5ed7;
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  color: #084298;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background: #0b5ed7;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background: #084298;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Form Box */
+.contact-form-container {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 350px;
+}
+
+.form-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #0b5ed7;
+}
+
+.input-group {
+  margin: 15px 0;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #cdd6e3;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #0b5ed7;
+  box-shadow: 0 0 8px rgba(11, 94, 215, 0.2);
+}
+
+/* Footer */
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  color: #555;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
+
+
+/* Chat Icon */
+#chatIcon {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #0078ff;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: 0.3s;
+}
+
+#chatIcon:hover {
+  transform: scale(1.1);
+}
+
+/* Popup Container */
+#chatPopup {
+  position: fixed;
+  bottom: 20px;
+  right: 85px;
+  max-height: 100vh;
+  width: 60vw;
+  border: 2px solid;
+  background: white;
+  padding: 8px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+  display: none;
+  animation: fadeIn 0.3s;
+}
+
+#chatPopup h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.dev-card {
+  background: #f4f8ff;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.dev-card:hover {
+  transform: translateY(-4px);
+}
+
+.dev-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.dev-card h3 {
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.dev-card p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+.card-container {
+  width: 80%;
+  margin: 0 auto;        
+  padding: 20px 0;
+  overflow: hidden;     
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.dev-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid #e0e7ff;
+}
+
+.dev-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.dev-card img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+  border: 3px solid #4f8bff;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: #222;
+}
+
+.role {
+  font-size: 14px;
+  color: #4f4f4f;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.contribution-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 5px;
+  color: #3568ff;
+}
+
+.contribution-text {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* --- Mobile Friendly Layout --- */
+@media (max-width: 500px) {
+  .card-container {
+    width: 95%;
+  }
+}

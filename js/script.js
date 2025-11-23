@@ -68,3 +68,42 @@ $(document).ready(function () {
         }
     });
 });
+
+  const form = document.getElementById("contactForm");
+  const result = document.getElementById("formResult");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    // Show loading message
+    result.innerHTML = "⏳ Sending your message...";
+    result.style.color = "#0b5ed7";
+
+    const formData = new FormData(form);
+    formData.append("access_key", "dcd60d8a-099b-4b76-ab03-0fa2d0988ea9");  
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      result.innerHTML = "✅ Your message has been sent successfully!";
+      result.style.color = "green";
+      form.reset();
+    } else {
+      result.innerHTML = "❌ Error sending message. Please try again.";
+      result.style.color = "red";
+    }
+  });
+
+
+  const chatIcon = document.getElementById("chatIcon");
+const chatPopup = document.getElementById("chatPopup");
+
+chatIcon.addEventListener("click", () => {
+  chatPopup.style.display =
+    chatPopup.style.display === "block" ? "none" : "block";
+});
