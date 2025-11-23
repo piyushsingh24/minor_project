@@ -970,6 +970,7 @@ input:focus, textarea:focus {
 
 /* Popup Container */
 #chatPopup {
+  overflow: scroll;
   position: fixed;
   bottom: 20px;
   right: 85px;
@@ -1034,6 +1035,7 @@ input:focus, textarea:focus {
 
 
 .card-container {
+  overflow: scroll;
   width: 80%;
   margin: 0 auto;        
   padding: 20px 0;
